@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+/* ===== MOBILE mặc định ===== */
+
+.navbar {
+    padding: 16px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    background: #1f2937;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 4px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+/* Nội dung */
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section {
+    min-height: 100vh;
+    margin: 24px 0;
+    padding: 30px 20px;
+
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+
+    background: #1f2937;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    display: none;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+}
+/* ===== PC / laptop: từ 768px trở lên ===== */
+
+@media (min-width: 768px) {
+    .navbar {
+        height: 70px;
+        padding: 0 8%;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: auto;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 28px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    main {
+        max-width: 1100px;
+    }
+
+    section {
+        margin: 40px 0;
+        padding: 60px;
+    }
+
+    section h1 {
+        font-size: 42px;
+    }
+
+    section p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+
+    background: #1f2937;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    display: none;
+    }
+
+    .back-to-top:hover {
+        transform: translateY(-3px);
+}
+}
